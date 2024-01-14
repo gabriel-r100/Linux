@@ -33,7 +33,7 @@ Ideally we want only read permissions on these files so we run chmod to set prop
 We would like researcher2 to be the only one allowed to access the drafts directory. We can achieve this by removing executable permissions for groups and others.
 ![change-directory-permissions](https://github.com/gabriel-r100/Linux-File-Permissions/assets/55646808/862acf2b-1b28-4c5d-a47f-25e4d2247453)
 
-Alternatively, because each permission is represented as a three-digit octal number (0-7), table below, permissions can also be updated with a command `chmod 700 /drafts`.<br>
+Alternatively, because each permission is represented as a three-digit octal number (0-7), table below, permissions can also be updated with a command `chmod 700 drafts/`.<br>
 ![Three-Digit Octal Permissions](https://github.com/gabriel-r100/Linux-File-Permissions/assets/55646808/3a4a4719-b5b8-4b71-b898-779d30d0c43d)
 
 ## Summary
