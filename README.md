@@ -1,7 +1,5 @@
 # Linux
-
-## Linux-File-Permissions
-<details>
+<details><summary><b>Viewing and changing permissions, viewing hidden files.</b></summary>
 
 ## Check file and directory details
 `ls -la` displays permissions for files in directory, including hidden files
