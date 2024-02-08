@@ -1,7 +1,7 @@
-# Linux-File-Permissions
+# Linux
 
-## Project description
-The task is to update permissions on files and directories within the projects directory.
+## Linux-File-Permissions
+<details>
 
 ## Check file and directory details
 `ls -la` displays permissions for files in directory, including hidden files
@@ -38,3 +38,4 @@ Alternatively, because each permission is represented as a three-digit octal num
 
 ## Summary
 This is my short document explaining commands to modify permissions to both files and directories.
+</details>
