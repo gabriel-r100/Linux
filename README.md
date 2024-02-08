@@ -33,7 +33,4 @@ We would like researcher2 to be the only one allowed to access the drafts direct
 
 Alternatively, because each permission is represented as a three-digit octal number (0-7), table below, permissions can also be updated with a command `chmod 700 drafts/`.<br>
 ![Three-Digit Octal Permissions](https://github.com/gabriel-r100/Linux-File-Permissions/assets/55646808/3a4a4719-b5b8-4b71-b898-779d30d0c43d)
-
-## Summary
-This is my short document explaining commands to modify permissions to both files and directories.
 </details>
