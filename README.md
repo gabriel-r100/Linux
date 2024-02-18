@@ -4,7 +4,7 @@
 
 
 <h2>General Linux</h2>
-<detailsopen><summary><b>Viewing and changing permissions, viewing hidden files.</b></summary>
+<details><summary><b>Viewing and changing permissions, viewing hidden files.</b></summary>
 
 <h3>Navigation and File Permissions</h3>
 
