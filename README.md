@@ -6,12 +6,26 @@
 <h2>General Linux</h2>
 <detailsopen><summary><b>Viewing and changing permissions, viewing hidden files.</b></summary>
 
-<h3>Listing Files and File Permissions</h3>
+<h3>Navigation and File Permissions</h3>
 
-`ls -la` displays permissions for files in directory, including hidden files
-![Checking-file-and-directory-details](https://github.com/gabriel-r100/Linux-File-Permissions/assets/55646808/908cc7e6-749b-4acd-aaae-57b681519f41)
+The terminal can print our the current directory you are in with the `pwd`. (**p**resent **w**orking **d**irectory)<br>
+Using the `ls` command we can print out the directories and files within the current directory.<br>
+We can also use the `ls` command to print out the contents of a directory that you have not moved into yet.<br>
 
-<h3>Describe the permissions string</h3>
+![1-pwd-ls-ls-directory](https://github.com/gabriel-r100/Linux/assets/55646808/fb9bb639-7a6d-484b-b3f9-f2a94620eef4)
+
+We can navigate through our directories using the `cd` command (**c**hange **d**irectory)<br>
+
+![2-cd](https://github.com/gabriel-r100/Linux/assets/55646808/a99c63de-891c-4a15-b520-e98f09cc9c2e)
+
+Two view our directory and file permissions, we can add the `-l` option to our `ls` command.
+
+![3-ls-l](https://github.com/gabriel-r100/Linux/assets/55646808/21507c37-aa64-48b6-b7a9-37f50d7720f6)
+
+<h3>Deciphering Permissions Output</h3>
+
+![linux-permissions drawio](https://github.com/gabriel-r100/Linux/assets/55646808/bbc84164-3317-4ae2-9d22-ea62984f1d62)
+
 
 Looking at permissions for “drafts”, we can see with the first character, that the selected object is a directory denoted by the `d`.
 ![d-file-permissions-explained](https://github.com/gabriel-r100/Linux-File-Permissions/assets/55646808/645ddb18-b123-4f85-9cb8-8f109ba57770)
