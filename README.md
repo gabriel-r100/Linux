@@ -26,8 +26,8 @@ Two view our directory and file permissions, we can add the `-l` option to our `
 The first character signals the file type, `d` for directory `-` for a file.<br><br>
 The next three characters define the permissions for the owner of the file.<br>
 The next three characters are for the owner's group permissions.<br>
-The last three characters are for everyone else. (other)<br><br>
-
+The last three characters are for everyone else. (other)<br>
+<br>
 `r` provides read permissions<br>
 `w` provide write permissions<br>
 `x` provides executable permissions<br>
@@ -40,10 +40,13 @@ By default, created files have a file permission of `rw` for the owner and `r` f
 Alternatively, because each permission is represented as a three-digit octal number (0-7), table included below, we could read the file permissions of `test.txt` as `644`
 ![Three-Digit Octal Permissions](https://github.com/gabriel-r100/Linux-File-Permissions/assets/55646808/3a4a4719-b5b8-4b71-b898-779d30d0c43d)
 
-<h3>Change file permissions</h3>
+<h3>Changing File/Directory Permissions and Owner</h3>
 
-Because our company does not allow other users to have write permissions, we will be removing them. Currently, project_k.txt is the only file that is set up incorrectly. We remove the write permission from others with the `chmod o-w project_k.txt` command. Now, all files and directories follow company policy.
-![removing-other-user-write-permissions](https://github.com/gabriel-r100/Linux-File-Permissions/assets/55646808/d28a4aba-09a9-4cc6-8cdd-9037d5072a51)
+To update the file/directory permissions, we can use the `chmod`.<br>
+<br>
+Additionally, if you would like to update the owner of the file, you can use the `chown` command.
+
+
 
 <h3>Change file permissions on a hidden file</h3>
 
