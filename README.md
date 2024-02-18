@@ -37,28 +37,23 @@ The last three characters are for everyone else. (other)<br>
 <br>
 By default, created files have a file permission of `rw` for the owner and `r` for the owner's group and everyone else.<br>
 <br>
-Alternatively, because each permission is represented as a three-digit octal number (0-7), table included below, we could read the file permissions of `test.txt` as `644`
+Alternatively, because each permission is represented as a three-digit octal number (0-7), table included below, we could read the file permissions of `test.txt` as `644`<br>
 ![Three-Digit Octal Permissions](https://github.com/gabriel-r100/Linux-File-Permissions/assets/55646808/3a4a4719-b5b8-4b71-b898-779d30d0c43d)
 
 <h3>Changing File/Directory Permissions and Owner</h3>
 
 To update the file/directory permissions, we can use the `chmod`.<br>
-<br>
-Additionally, if you would like to update the owner of the file, you can use the `chown` command.
+Additionally, if you would like to update the owner of the file, you can use the `chown` command.<br>
+![5-chmod-chown](https://github.com/gabriel-r100/Linux/assets/55646808/cbbf242a-76fa-4a05-bc0b-77bda94c7083)
 
 
+<h3>Viewing Hidden Files</h3>
 
-<h3>Change file permissions on a hidden file</h3>
+Hidden files start with a `.`, we can show them in our `ls` command using the `-a` option.<br>
+![6-ls-a](https://github.com/gabriel-r100/Linux/assets/55646808/9a25de52-a5c2-4eee-b10c-bda640111867)
 
-Hidden files are denoted by the beginning of the filename including a `.`
-Ideally we want only read permissions on these files so we run chmod to set proper permissions.
-![changing-file-permissions-hidden-file](https://github.com/gabriel-r100/Linux-File-Permissions/assets/55646808/12174b29-190e-4ed0-b93d-9909e047fa7a)
-
-<h3>Change directory permissions</h3>
-
-We would like researcher2 to be the only one allowed to access the drafts directory. We can achieve this by removing executable permissions for groups and others.
-![change-directory-permissions](https://github.com/gabriel-r100/Linux-File-Permissions/assets/55646808/862acf2b-1b28-4c5d-a47f-25e4d2247453)
-
+We can combine options by entering them after the hyphen. `-la` will list contents including hidden files
+![7-ls-la](https://github.com/gabriel-r100/Linux/assets/55646808/9bbe442a-8f24-4f94-9fcf-6f35dc2960a5)
 
 </details>
 
