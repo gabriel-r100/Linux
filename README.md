@@ -57,10 +57,12 @@ We can combine options by entering them after the hyphen. `-la` will list conten
 
 </details>
 
+`pwd`, `cd`, `ls -la`, `chmod`, `chown`
 
 
 
-<details open><summary><h2>Text Output and Manipulation</h2></summary>
+
+<details><summary><h2>Text Output and Manipulation</h2></summary>
 
 <h3>Outputting File Contents</h3>
 
@@ -77,6 +79,15 @@ With both `head` and `tail` we can modify the number of lines by adding the numb
 
 ![3-head-20](https://github.com/gabriel-r100/Linux/assets/55646808/8448bccd-f092-4c7c-8a4b-43465bfb3490)
 ![5-tail-20](https://github.com/gabriel-r100/Linux/assets/55646808/81eff1f9-fa1f-421e-a489-d7dde625cb28)
+
+Additionally, we also have the `more` and `less` command, these also output the contents of text but allow you to scroll page by page. (only shows you the amount your terminal can display at once.
+![10-more-config](https://github.com/gabriel-r100/Linux/assets/55646808/95f555f1-bd56-44c5-8eb0-a69444aa32fa)
+
+
+`less` has a few more functionalities such as being able to search while outputting the contents (matches what you look for instead of only showing you lines that match with `grep`). You will need to enter `/` to enter your search term.<br>
+![11-less-config](https://github.com/gabriel-r100/Linux/assets/55646808/9049104f-1916-4b29-834f-1aa3c488b6d4)
+![11-less-config-search](https://github.com/gabriel-r100/Linux/assets/55646808/651367a9-0e43-4dda-a015-3e70446000c1)
+
 
 <h3>Manipulating Text</h3>
 
@@ -97,6 +108,8 @@ We can also find and replace within files with the `sed` command.<br>
     - `sed s/bottom/end/2 test.txt > test.txt` will only replace the second occurrence
 
 </details>
+
+`cat`, `head`, `tail`, `nl`, `grep`, `sed`, `less`, `more`
 
 <h2>Kali Linux Tools</h2>
 
