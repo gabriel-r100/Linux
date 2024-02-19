@@ -71,7 +71,7 @@ We have a few options when choosing to output the contents of a file to our term
 `tail` will output the last 10 lines of a file (10 is default)<br>
 `nl` will output the entirety of the contents but with line numbers<br>
 
-![linux-text-output drawio](https://github.com/gabriel-r100/Linux/assets/55646808/a501ed71-b5f6-45d8-9d8b-1543bf416a71)
+![linux-text-output drawio](https://github.com/gabriel-r100/Linux/assets/55646808/af853ae6-e47e-4291-b1f1-b4a5b5497d5d)
 
 With both `head` and `tail` we can modify the number of lines by adding the number with the following syntax: `head -20 <filename>`, `tail -20 <filename><br>
 
