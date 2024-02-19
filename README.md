@@ -4,7 +4,7 @@
 
 
 <h2>General Linux</h2>
-<details><summary><b>Viewing and changing permissions, viewing hidden files.</b></summary>
+<details><summary><h2>Viewing and changing permissions, viewing hidden files.</h2></summary>
 
 <h3>Navigation and File Permissions</h3>
 
@@ -59,6 +59,44 @@ We can combine options by entering them after the hyphen. `-la` will list conten
 
 
 
+
+<details open><summary><h2>Text Output and Manipulation</h2></summary>
+
+<h3>Outputting File Contents</h3>
+
+We have a few options when choosing to output the contents of a file to our terminal.<br>
+<br>
+`cat` will output the entirety of the contents at once<br>
+`head` will output the first 10 lines of a file (10 is default)<br>
+`tail` will output the last 10 lines of a file (10 is default)<br>
+`nl` will output the entirety of the contents but with line numbers<br>
+
+![linux-text-output drawio](https://github.com/gabriel-r100/Linux/assets/55646808/a501ed71-b5f6-45d8-9d8b-1543bf416a71)
+
+With both `head` and `tail` we can modify the number of lines by adding the number with the following syntax: `head -20 <filename>`, `tail -20 <filename><br>
+
+![3-head-20](https://github.com/gabriel-r100/Linux/assets/55646808/8448bccd-f092-4c7c-8a4b-43465bfb3490)
+![5-tail-20](https://github.com/gabriel-r100/Linux/assets/55646808/81eff1f9-fa1f-421e-a489-d7dde625cb28)
+
+<h3>Manipulating Text</h3>
+
+We can narrow down output to particularly what we are looking for with the `grep` command in combination with one of our text output commands.<br>
+Syntax is: `cat <filename> | grep <key>` replace <key> with what you would like to look for.<br>
+
+![7-grep](https://github.com/gabriel-r100/Linux/assets/55646808/631fefee-c9af-48da-a760-d110c758d990)
+
+We can also find and replace within files with the `sed` command.<br>
+
+![8-sed](https://github.com/gabriel-r100/Linux/assets/55646808/bb9c5ab9-ebf3-4c18-8461-923f72f54f00)
+
+`s` command performs substitution<br>
+`bottom` being replaced with `end`<br>
+`g` option tells Linux that you would like this globally<br>
+  - If you leave the global flag out, it will only replace the first occurrence
+  - Can target a specific occurrence by adding a number instead of `g`
+    - `sed s/bottom/end/2 test.txt > test.txt` will only replace the second occurrence
+
+</details>
 
 <h2>Kali Linux Tools</h2>
 
