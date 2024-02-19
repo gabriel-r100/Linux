@@ -73,7 +73,7 @@ We have a few options when choosing to output the contents of a file to our term
 
 ![linux-text-output drawio](https://github.com/gabriel-r100/Linux/assets/55646808/af853ae6-e47e-4291-b1f1-b4a5b5497d5d)
 
-With both `head` and `tail` we can modify the number of lines by adding the number with the following syntax: `head -20 <filename>`, `tail -20 <filename><br>
+With both `head` and `tail` we can modify the number of lines by adding the number with the following syntax: `head -20 <filename>`, `tail -20 <filename>` <br>
 
 ![3-head-20](https://github.com/gabriel-r100/Linux/assets/55646808/8448bccd-f092-4c7c-8a4b-43465bfb3490)
 ![5-tail-20](https://github.com/gabriel-r100/Linux/assets/55646808/81eff1f9-fa1f-421e-a489-d7dde625cb28)
