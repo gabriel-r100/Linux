@@ -114,9 +114,45 @@ We can also find and replace within files with the `sed` command.<br>
 
 
 
-<details open><summary><h2>Network Configurations and Inspection</h2></summary>
+<details><summary><h2>Network Configurations and Inspection</h2></summary>
+To view our network interfaces/adapters and their configurations, we can use the `ifconfig` command or on newer Linux distributions, the more modern and featured `ip address` command.<br>
+As you can see below, my Debian 12 distribution does not have `ifconfig` installed by default.<br>
 
+![1-ifconfig](https://github.com/gabriel-r100/Linux/assets/55646808/823e4187-519b-4d8f-b296-59face627404)
+![3-ip-address](https://github.com/gabriel-r100/Linux/assets/55646808/ad184232-a731-4d3b-8dac-a5faf41b6ec9)
+<br>
+Additionally, we can view our wireless interfaces with the command `iwconfig`.
 
+![2-iwconfig](https://github.com/gabriel-r100/Linux/assets/55646808/c1b5c78a-e0c7-46a4-b7bd-00aee9c45f38)
+
+Using `ifconfig` we can update the assigned IP address on our interface with the syntax `(sudo) ifconfig <interface> <ipaddress>`.
+
+![4-changing-ip-address](https://github.com/gabriel-r100/Linux/assets/55646808/2ffa06b7-38f8-4692-a9de-53f932a54ea8)
+
+The MAC address can also be updated by:<br>
+<br>
+First shutting down the interface with `(sudo) ifconfig <interface> down`.<br>
+Then updating the MAC address with `(sudo) ifconfig <interface> hw ether <macaddress>`<br>
+Lastly, we need to re-enable the interface with `(sudo) ifconfig <interface> up`<br>
+
+![5-changing-mac-address](https://github.com/gabriel-r100/Linux/assets/55646808/f230dcfc-f04a-49e0-a816-3d52f772e0e2)
+
+If we ever need to renew our lease, similar to Windows' `ipconfig /renew`, we can use the `dhclient <interface>` command.
+
+<h3>DNS</h3>
+The command `dig` can help us find the IP address of websites, similar to Window's `nslookup`.
+
+![7-dig-google](https://github.com/gabriel-r100/Linux/assets/55646808/082912a2-c339-4ba2-9d0b-cb2d1b2ec093)
+
+We can also modify the DNS server by modifying the DNS configurations stored at `/etc/resolv.conf`<br>
+In my Kali Linux VM's case, my DNS server is pointing to 192.168.1.1 (home router).<br>
+
+![8-dns-configuration](https://github.com/gabriel-r100/Linux/assets/55646808/c3795916-e6c0-424a-ae2b-86bd5948088f)
+
+We can also add our own DNS entries by modifying the file at `/etc/hosts`<br>
+We can add entries with the syntax `<ipaddress> [TAB] <FQDN>`
+
+![9-dns-entries](https://github.com/gabriel-r100/Linux/assets/55646808/e910f963-c29c-4d14-8543-a00ec5c305ca)
 
 </details>
 
