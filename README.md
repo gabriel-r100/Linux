@@ -111,5 +111,19 @@ We can also find and replace within files with the `sed` command.<br>
 
 `cat`, `head`, `tail`, `nl`, `grep`, `sed`, `less`, `more`
 
+
+
+
+<details open><summary><h2>Network Configurations and Inspection</h2></summary>
+
+
+
+</details>
+
+`ifconfig`, `iwconfig`, `dhclient`, `dig`
+
+
+
+
 <h2>Kali Linux Tools</h2>
 
