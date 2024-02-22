@@ -43,6 +43,7 @@ Alternatively, because each permission is represented as a three-digit octal num
 <h3>Changing File/Directory Permissions and Owner</h3>
 
 To update the file/directory permissions, we can use the `chmod`.<br>
+To transfer ownership of a group we can use the `chgrp` command.<br>
 Additionally, if you would like to update the owner of the file, you can use the `chown` command.<br>
 ![5-chmod-chown](https://github.com/gabriel-r100/Linux/assets/55646808/cbbf242a-76fa-4a05-bc0b-77bda94c7083)
 
