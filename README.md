@@ -161,5 +161,14 @@ We can add entries with the syntax `<ipaddress> [TAB] <FQDN>`
 
 
 
+<details open><summary><h2>Adding, Updating, and Removing Software</h2></summary>
+  
+</details>
+
+`apt-get install`, `apt-get remove`, `apt-cache search`, `apt-get purge`, `apt autoremove`, `apt-get update`, `/etc/apt/sources.list`, `git clone`
+
+
+
+
 <h2>Kali Linux Tools</h2>
 
