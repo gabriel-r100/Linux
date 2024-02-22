@@ -161,8 +161,27 @@ We can add entries with the syntax `<ipaddress> [TAB] <FQDN>`
 
 
 
-<details open><summary><h2>Adding, Updating, and Removing Software</h2></summary>
-  
+<details><summary><h2>Adding, Updating, and Removing Software</h2></summary>
+
+Linux doesn't always have a GUI like windows, we will still need to be able to download, install, update, and remove software from our system.<br>
+`apt-get` can be used in combination with several keywords to perform these functions. (`apt` is also available but has a bit less functionality)<br>
+<br>
+We can search our repository for programs with the command `apt-cache search <keyword>`
+
+![1-apt-cache-search](https://github.com/gabriel-r100/Linux/assets/55646808/541d6532-d06a-4d07-b560-ff7ae993ed67)
+
+We can install programs in our using the `apt-get install <program_name>`<br>
+<br>
+We can remove programs using `apt-get remove <program_name>`<br>
+Alternatively, the `apt-get purge <program_name>` will remove the software **and** it's configuration file.<br>
+We can add on `apt-get autoremove <program_name>` to remove any dependencies installed with the program.<br>
+<br>
+We can also update our installed programs using the `apt-get update` command.<br>
+This will update all out of date software in our repository.<br>
+
+If our repository doesn't have the program we are looking for, we can add to our sources list located at `etc/apt/sources.list`
+Alternatively, we can clone a program from github using the command `git clone <github_url>`, it will download it to our system.
+
 </details>
 
 `apt-get install`, `apt-get remove`, `apt-cache search`, `apt-get purge`, `apt autoremove`, `apt-get update`, `/etc/apt/sources.list`, `git clone`
