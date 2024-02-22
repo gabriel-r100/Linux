@@ -156,7 +156,7 @@ We can add entries with the syntax `<ipaddress> [TAB] <FQDN>`
 
 </details>
 
-`ifconfig`, `iwconfig`, `dhclient`, `dig`
+`ifconfig`, `iwconfig`, `ip address`, `dhclient`, `dig`
 
 
 
