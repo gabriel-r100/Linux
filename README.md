@@ -4,6 +4,10 @@
 
 
 <h2>General Linux</h2>
+
+
+
+
 <details><summary><h2>Viewing and changing permissions, viewing hidden files.</h2></summary>
 
 <h3>Navigation and File Permissions</h3>
@@ -59,6 +63,44 @@ We can combine options by entering them after the hyphen. `-la` will list conten
 </details>
 
 `pwd`, `cd`, `ls -la`, `chmod`, `chown`
+
+
+
+
+<details><summary><h2>Default and Special Permissions</h2></summary>
+
+<h3>Default Permissions</h3>
+
+By default, Linux sets the permissions for new files using the three-digit octal permissions of `666`, meaning everyone has read and write access.<br>
+When I check the permissions on my files currently, they are set to `644` I can check what `umask` is configured to see what permissions are default on my system.<br>
+The `umask` is located at `/home/<user>/.profile`, in my case `/home/gabriel/.profile`<br>
+
+![2-profile](https://github.com/gabriel-r100/Linux/assets/55646808/93123daf-4e74-4573-9eed-dec2d61d94b0)
+
+The `umask` is subtracted from the Linux default permissions resulting in permissions of `644`
+
+![1-default_permissions](https://github.com/gabriel-r100/Linux/assets/55646808/16dd148f-46ac-46ee-a55f-d9ed4e8a8cf9)
+
+<h3>Special Permissions</h3>
+
+`SUID` elevates permissions to the owner. It does this by setting a bit to allow any user to execute the file with the owner's permission but does not extend those permissions beyond that file.<br>
+To set a `SUID` bit, we enter a `4` before our permissions. `chmod 4644 <file>`, we will see a capital `S` bit placed on the write place.<br>
+
+![3-SUID-644](https://github.com/gabriel-r100/Linux/assets/55646808/6e6ce7d2-3a55-4327-9156-d6b54ecfacd0)
+
+`SGID` elevates the permissions to the **owner's group**. It does this similar to `SUID` but denoted with a `2`.<br>
+To set the `SGID` bit, we enter a `2` before our permissions. `chmod 2644 <file>`, we can see a capital `S` on the execution place of the group.<br>
+
+![4-SGID-644](https://github.com/gabriel-r100/Linux/assets/55646808/f21fe489-a396-4851-990e-7e537aae7d57)
+
+We can also apply the `SGID` bit to a directory but new files created in the directory will belong to the owner's group, helpful when multiple people will contribute to a directory.<br>
+
+A sticky bit a legacy permission bit used to allow a user to delete or rename files within a directory.<br>
+Modern distributions now ignore the sticky bit.
+
+</details>
+
+`umask`, `SUID`, `SGID`, sticky bit
 
 
 
