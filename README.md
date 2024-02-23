@@ -234,3 +234,13 @@ Alternatively, we can clone a program from github using the command `git clone <
 
 <h2>Kali Linux Tools</h2>
 
+<details><summary><h2>Possible Privilege Escalation</h2></summary>
+
+A bad actor can find our sudo file using a search command of `find / -user root -perm -4000`<br>
+This will return files that are owned by the root user with SUID permissions set.<br>
+This means that if a user can control an application that needs root permissions, they can use those permissions to have root access over a system.<br>
+
+![9999-finding-root-files-with-SUID](https://github.com/gabriel-r100/Linux/assets/55646808/7a37e9f7-85dc-4390-9fe0-61a5bc01d37f)
+
+
+</details>
