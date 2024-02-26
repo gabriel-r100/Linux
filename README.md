@@ -284,7 +284,7 @@ We can also schedule processes with the `at` and `crond` command.
 
 
 
-<details open><summary><h2>Shell/Environment Variables and Adding New Tools</h2></summary>
+<details><summary><h2>Shell/Environment Variables and Adding New Tools</h2></summary>
 
 There are two types of variables:
   - Shell variables exist only within the shell they are created
