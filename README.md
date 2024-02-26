@@ -284,6 +284,56 @@ We can also schedule processes with the `at` and `crond` command.
 
 
 
+<details open><summary><h2>Shell/Environment Variables and Adding New Tools</h2></summary>
+
+There are two types of variables:
+  - Shell variables exist only within the shell they are created
+  - Environment variables (aka process-wide variables) change how the system looks, acts, and feels.
+
+We can view our environment variables using the `env` command. Environment variables will be in all capital letters
+
+![1-env](https://github.com/gabriel-r100/Linux/assets/55646808/f310b421-bbca-4a07-b635-20b947274468)
+
+We can view all environment variables using the `set` command. (This will include shell variables, local variables, and shell functions.)<br>
+The output will be very long, so it is recommended to pair with `more` or `less` to see one page at a time. Use `grep` if you know the variable you are looking for.<br>
+
+![2-set](https://github.com/gabriel-r100/Linux/assets/55646808/da6e93c0-4d4d-47c5-8069-0aa3500ca96c)
+
+The command `set | grep HISTSIZE` will find the variable that determines how many commands will go into our history. (Accessed with up arrows)<br>
+
+![3-HISTSIZE](https://github.com/gabriel-r100/Linux/assets/55646808/4a65c35b-3131-4f55-9bee-d30614584a45)
+
+We can change this to 0 to have our shell remember no previous commands
+
+    HISTSIZE=0
+
+When changing variables, it's a good idea to save the previous value.
+
+    echo $HISTSIZE > ~valueofHISTSIZE.txt
+
+When we make these changes, they will revert to defaults once the shell is terminated.<br>
+To make the changes permenant, we need to use the `export` command
+
+![7-exporting-HISTSIZE](https://github.com/gabriel-r100/Linux/assets/55646808/2b9e024b-8832-4110-8403-69f3a0bf9658)
+
+We can also change the prompt that our shell provides as the variable that stores the value is `PS1`.<br>
+On my Debian system, the default terminal prompt is `gabriel@Debian12:~`<br>
+`gabriel` is the user, which can be added with the `\u`.<br>
+`Debian12` is the host name, which can be added with `\h`.<br>
+`:~` is the current directory, which can be added with `\w`.<br>
+
+We can make our Linux terminal prompt look like Windows by entering `PS1='C:\w'
+
+![9-windows-prompt-on-linux](https://github.com/gabriel-r100/Linux/assets/55646808/0c31237a-3946-4b17-b822-baa5698cd0a1)
+
+
+</details>
+
+`env`, `set`, `HISTSIZE`, `export`, shell prompt, adding commands (`bin/sbin`)
+
+
+
+
 <h2>Kali Linux Tools</h2>
 
 <details><summary><h2>Possible Privilege Escalation</h2></summary>
