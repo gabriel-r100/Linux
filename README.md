@@ -232,6 +232,58 @@ Alternatively, we can clone a program from github using the command `git clone <
 
 
 
+<details><summary><h2>Process Management</h2></summary>
+
+Linux has hundreds, sometimes thousands, of processes running at the same time.<br>
+We may need to view what processes are running and stop certain ones as well.<br>
+
+We can use the `ps` command to view what processes are active. `pid` is the process ID which is used to work with processes.<br>
+
+![1-ps](https://github.com/gabriel-r100/Linux/assets/55646808/79a32847-f3d6-4c6f-973a-22c44b98bf0d)
+
+We can view all processes running for all users with the `ps aux` command, this will output a lot more processes. If you are looking for a specific process, we can use the `grep` command to filter output.<br>
+
+![2-ps-aux](https://github.com/gabriel-r100/Linux/assets/55646808/4054daf7-02c3-47dc-b50d-f5c57eaf8716)
+
+`ps` will take snapshots of process, we can view processes and the compute they are using with the `top` command which refreshes every 3 seconds.<br>
+
+![3-top](https://github.com/gabriel-r100/Linux/assets/55646808/2726cd84-759d-4833-a02e-6ffa82b1c580)
+
+We can also use the `nice` command to prioritize processes.<br>
+The higher the value, the "nicer" you are being meaning the process will be less prioritized.<br>
+
+![4-nice-spectrum](https://github.com/gabriel-r100/Linux/assets/55646808/bda22def-da63-405b-a84b-46416f6d960e)
+
+If a `nice` level has been defined, we can use the `renice` command to update the value. It will also require the process ID (PID).<br>
+**Any user can lower priority, only root user can increase past 0**<br>
+<br>
+We can use the `kill` command to end processes whether they are consuming too many resources or causes issues.<br>
+There are 64 kill signals, below are commonly used ones.<br>
+
+    # This will restart a process
+    kill -1 <PID>
+    # This will end the process
+    kill -9 <PID>
+
+![5-kill-table](https://github.com/gabriel-r100/Linux/assets/55646808/e5f07ad0-c72c-4ea0-8929-2802f81b81f7)
+
+We can also kill from the `top` utility by pressing `k` and entering the PID of the process we want to terminate.<br>
+
+![6-kill-via-top](https://github.com/gabriel-r100/Linux/assets/55646808/7f93d708-ffa2-4c73-ae81-fd918c75e216)
+
+We can run process in the background by adding an ampersand when calling for the process: `vim test.txt &`<br>
+We can bring it to the foreground withe the `fg` command plus it's PID: `fd <PID>`<br>
+<br>
+
+We can also schedule processes with the `at` and `crond` command.
+
+</details>
+
+`ps`, `pid`, `ps aux`, `top`, `nice`, `renice`, `kill`, `&`, `fg`, `at`, `crond`
+
+
+
+
 <h2>Kali Linux Tools</h2>
 
 <details><summary><h2>Possible Privilege Escalation</h2></summary>
