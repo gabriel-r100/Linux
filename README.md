@@ -290,6 +290,14 @@ There are two types of variables:
   - Shell variables exist only within the shell they are created
   - Environment variables (aka process-wide variables) change how the system looks, acts, and feels.
 
+Shell variables can be declared and set on the terminal
+
+    VARIABLE="My variable"
+
+We can use the `unset` command to free the variable created, this variable will also disappear once the shell is closed.
+
+    unset VARIABLE
+
 We can view our environment variables using the `env` command. Environment variables will be in all capital letters
 
 ![1-env](https://github.com/gabriel-r100/Linux/assets/55646808/f310b421-bbca-4a07-b635-20b947274468)
@@ -325,6 +333,22 @@ On my Debian system, the default terminal prompt is `gabriel@Debian12:~`<br>
 We can make our Linux terminal prompt look like Windows by entering `PS1='C:\w'
 
 ![9-windows-prompt-on-linux](https://github.com/gabriel-r100/Linux/assets/55646808/0c31237a-3946-4b17-b822-baa5698cd0a1)
+
+<h3>New Tools</h3>
+
+Once we install new tools we want to be able to use commands associated with them.<br>
+By default, Linux will check a few directories for valid commands to execute.<br>
+The directories it will check can be found in the `PATH` variable.<br>
+
+![10-PATH](https://github.com/gabriel-r100/Linux/assets/55646808/415ee0e2-6b4f-481f-b9a4-1c6c6fe233e0)
+
+When we download new tools that enable new commands, we need to **append** the directory to the `PATH` variable.<br>
+**If we replace the value with the new directory, only the new directory commands will work. Always append, not replace**<br>
+
+    # This will make PATH equal to the current value of PATH
+    PATH=$PATH
+    # This will append a new directory to the existing value of PATH
+    PATH=$PATH:/root/newtool
 
 
 </details>
