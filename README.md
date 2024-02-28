@@ -358,9 +358,19 @@ When we download new tools that enable new commands, we need to **append** the d
 
 
 
+<details><summary><h2>Compressing and Archiving Files</h2></summary>
+
+
+</details>
+
+`tar`, `gzip`, `gunzip`, `bzip2`, `bunzip2`, `compress`, `uncompress`, `dd`
+
+
+
+
 <h2>Kali Linux Tools</h2>
 
-<details><summary><h2>Possible Privilege Escalation</h2></summary>
+<details><summary><h3>Possible Privilege Escalation</h3></summary>
 
 A bad actor can find our sudo file using a search command of `find / -user root -perm -4000`<br>
 This will return files that are owned by the root user with SUID permissions set.<br>
