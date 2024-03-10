@@ -369,7 +369,35 @@ There are two types of compression:<br>
 
 We can also combine files into an archive (tarring) to make transporting easier.<br>
 Once combined, it is referred to as a archive, tar file, or tarball.<br>
-  
+
+    tar -cvf <tar_file_name>.tar <file1> <file2> <file3>
+  - `-c` signals tar command to create
+  - `-v` signals for verbose, it will lists the files that are tarred
+  - `-f` signals what the file name will be
+<br>
+
+    tar -cvf HackersArise.tar hackerarise1 hackerarise2 hackerarise3
+
+We can also see what files are within a tar file<br>
+
+    tar -tvf <tar_file_name>.tar
+  - `-t` signals to list the contents
+  - `-v` signals for verbose output
+  - `-f` signals that we will name the file we are interested in
+<br>
+
+    tar -tvf HackersArise.tar
+
+Lastly, we can extract the files within the tar file<br>
+
+    tar -xvf <tar_file_name>.tar
+  - `-x` signals to extract
+  - `-v` signals for verbose output
+  - `-f` signals that we will name the file we are interested in
+<br>
+
+    tar -xvf HackersArise.tar
+
 </details>
 
 `tar`, `gzip`, `gunzip`, `bzip2`, `bunzip2`, `compress`, `uncompress`, `dd`
