@@ -360,7 +360,16 @@ When we download new tools that enable new commands, we need to **append** the d
 
 <details><summary><h2>Compressing and Archiving Files</h2></summary>
 
+Compression is used to make data smaller.<br>
+There are two types of compression:<br>
 
+- Lossy compression provides bigger difference (more compression) at the cost of integrity.
+  - Examples would be .mp3, .mp4, .jpg
+- Lossless compression upholds integrity but compresses less.
+
+We can also combine files into an archive (tarring) to make transporting easier.<br>
+Once combined, it is referred to as a archive, tar file, or tarball.<br>
+  
 </details>
 
 `tar`, `gzip`, `gunzip`, `bzip2`, `bunzip2`, `compress`, `uncompress`, `dd`
