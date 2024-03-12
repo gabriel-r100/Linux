@@ -367,6 +367,8 @@ There are two types of compression:<br>
   - Examples would be .mp3, .mp4, .jpg
 - Lossless compression upholds integrity but compresses less.
 
+<details><summary>Tarring Files Together Prior to Compression</summary>
+
 We can also combine files into an archive (tarring) to make transporting easier.<br>
 Once combined, it is referred to as a archive, tar file, or tarball.<br>
 
@@ -397,6 +399,46 @@ Lastly, we can extract the files within the tar file<br>
 <br>
 
     tar -xvf HackersArise.tar
+    
+</details>
+<br>
+
+<details><summary>Compressing and Decompressing Tarred Files</summary>
+
+Once we have combined our files into a single tar file, we can use three different methods of compression to shrink the file size.
+
+We can use the `gzip` compression method which will create `.tar.gz` or `.tgz` files.<br>
+
+    gzip HackersArise.*
+
+This will use the `gzip` command on any file that begins with `HackersArise.` which will include our tar file.<br>
+We can similarly decompress the file using the `gunzip` command.<br>
+
+    gunzip HackersArise.*
+
+<br>
+We can use the `bzip2` compression method to create `.tar.bz2` files.<br>
+`bzip2` is slower but offers the most compression of the three options.<br>
+
+    bzip2 HackersArise.*
+
+We can decompress with the `bunzip2` command.<br>
+
+  bunzip2 HackersArise.*
+<br>
+We can use the `compress` compression method to create `.tar.z` files.<br>
+`compress` is the fastest but offers the least amount of compression.<br>
+
+    compress HackersArise.*
+
+We can decompress with the `uncompress` command. We can also use the `gunzip` command on files that were compressed using `compress`.
+
+    uncompress HackersArise.*
+    gunzip HackersArise.*
+  
+</details>
+
+
 
 </details>
 
