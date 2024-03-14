@@ -447,6 +447,28 @@ We can decompress with the `uncompress` command. We can also use the `gunzip` co
 
 
 
+<details><summary><h2>Creating Copies of Storage Devices</h2></summary>
+
+We can create a bit-by-bit copy of a storage device with the use of the `dd` command.<br>
+This command is very slow but is useful for creating a copy for forensic investigators.<br>
+
+    dd if=<input_file> of=<name_of_copy>
+    dd if=/dev/sdb of=/root/flashcopy
+
+`if` will designate what will be copied<br>
+`of` designates what the name of the file will be, additionally you can specify where we will place the file.<br>
+`noerror`is a helpful option to add if you would like the copy to continue regardless of errors.<br>
+`bs` allows you to determine the block size while copying, it can speed up the process of copying but errors are more impactful. (default block size is 512 bytes)<br>
+
+    dd if=/dev/sdb of=/root/flashcopy bs=4096 conv=noerror
+
+</details>
+
+`dd`
+
+
+
+
 <h2>Kali Linux Tools</h2>
 
 <details><summary><h3>Possible Privilege Escalation</h3></summary>
